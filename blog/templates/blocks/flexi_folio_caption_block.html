@@ -1,0 +1,35 @@
+<!-- Display optional introductory text with a flexbox folio of images -->
+<!-- Introductory text-->
+<div class="clearfix folio block">
+	<perch:if exists="folio_head">
+		<h4><perch:blog type="text" id="folio_head" label="Optional: Headline for the folio items to follow" divider-before="The purpose of this 'block' is to present an array of images. A headline and other introductory text is an option." /></h4>
+	</perch:if>
+		<perch:if exists="folio_text">
+			<perch:blog type="textarea" id="folio_text" label="Optional: Text to briefly explain the folio items to follow" markdown="true" editor="simplemde" size="s" />
+		</perch:if>
+			<!--Display the folio of images, an unordered list with image repeater-->
+			<ul class="folio-wrapper">
+				<perch:repeater id="flexi_images" label="Image Folio: Images added here will lay out horizontally on as many rows as are needed." >
+					<li class="no-list-style">
+						<figure class="figure-ctr">
+							<img src="<perch:blog type="image" id="image" label="Image" bucket="images" />"  alt="<perch:blog type="text" id="alt" label="Description" help="This will not appear on the page. A short and simple description of the image will be read by screen readers and will aid site ranking. " required="true"  />" 
+		                  sizes="(min-width: 720px) 540,
+		                         (min-width: 540px) 360,
+		                         100vw"
+		               srcset="<perch:blog type="image" id="image" label="Image" width="360"> 360w,
+		               <perch:blog type="image" id="image" label="Image" width="540"> 540w,
+		               <perch:blog type="image" id="image" label="Image" width="720"> 720w">
+								<figcaption class="figure-caption">
+									<perch:if exists="caption">
+									<perch:blog id="caption" type="textarea" label="Caption will appear below the image." markdown="true" editor="markitup" html="true" size="s"/>
+								</perch:if> 
+							</figcaption>
+						</figure>
+					</li>
+				</perch:repeater>
+			</ul>
+</div>
+
+
+
+ 

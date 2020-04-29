@@ -1,0 +1,313 @@
+blockquote  {
+   display: inline-block;
+   padding: 2rem 2rem 2rem .65rem;
+   margin-right: 0;
+}
+
+blockquote p  {
+    padding-left: 3rem;
+    padding-bottom: .65rem;
+}
+
+.button   {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  margin: 2rem 0;
+}
+
+
+
+/* Dual images side-by-side */
+.imgs-dual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+.dual-img {
+    align-self: initial;
+    justify-self: center;
+}
+
+/* Images and text side-by-side, aligned horizontally */
+/* See media query for wider screens */
+.img-cntr-lft {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.img-cntr-lft .img-rule {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    justify-self: center;
+}
+
+.img-cntr-lft .txt-rule {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: center;
+}
+
+.img-cntr-rt {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.img-cntr-rt .img-rule {
+    grid-column: 1;
+    align-self: center;
+    justify-self: center;
+}
+
+.img-cntr-rt .txt-rule {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: center;
+}
+
+/* For side-by-side floated image / wrapping text */
+.figcap-lft {
+    float: left;
+}
+
+.figcap-rt  {
+        float: right;  
+    }
+
+.float-textrow    {
+   margin: 0;
+}
+
+/* Display images in a horizontal flexbox */
+
+.folio-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+
+
+@media screen and (min-width: 640px) 	{
+/* For side-by-side floated image / wrapping text */	
+   .img-cntr-lft {
+    	grid-template-columns: 2fr 3fr;
+    	grid-gap: 2em;
+	}
+
+	.img-cntr-lft .img-rule {
+    	grid-column: 1;
+    	grid-row: 1;
+	}
+
+   .img-cntr-lft .txt-rule {
+    grid-column: 2;
+    grid-row: 1;
+   }
+
+   .img-cntr-rt {
+      grid-template-columns: 3fr 2fr;
+      grid-gap: 2rem;
+   }
+
+   .img-cntr-rt .img-rule {
+      grid-column: 2;
+      grid-row: 1;
+   }
+
+   .img-cntr-rt .txt-rule {
+      grid-column: 1;
+      grid-row: 1;
+   }
+
+/* For image and text side-by-side, floated images */
+   .figcap-lft {
+      float: left;
+      width: 42.5%;
+      margin-right: 2rem;
+   }   
+
+   .figcap-rt  {
+      float: right;
+      width: 42.5%;
+      margin-left: 2rem; 
+   }
+
+      /* Set parameters for text next to a floated image block */
+      .float-textrow    {
+         margin: 0 4rem;
+      }
+}
+/*
+.img-cntr-lft .txt-cntr {
+
+    grid-column: 2;
+    grid-row: 1;
+    padding-right: 1.65rem;
+
+}
+.img-cntr-lft .txt-cntr {
+
+    grid-column: 1;
+    grid-row: 2;
+    align-self: center;
+    margin-top: .85rem;
+    padding-bottom: .85rem;
+}
+*/
+
+/* Create a two-column blog post page on larger screens- content + archive sidebar */
+@media screen and (min-width: 640px)  {
+  .wrapper-blog   {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+  }
+  .wrapper-blog .primary-content  {
+    grid-column: 1;
+  }
+  .wrapper-blog .sidebar  {
+    grid-column: 2;
+  }
+
+}
+
+/* Intro area, to the blog for example, with title, author, image */
+.intro  {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.75vw;
+}
+
+.intro-heading  {
+  grid-column: 1 / 4;
+}
+
+.meta   {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: center;
+}
+
+.intro-image  {
+  grid-column: 2 / 4;
+  grid-row: 2;
+  place-items: center;
+}
+
+.description  {
+  grid-column: 1 / 4;
+}
+
+/* grid for the comments box */
+.comments-grid  {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: .85rem;
+}
+
+.submit   {
+  padding-bottom: .85rem;
+}
+
+.submit input   {
+  padding: .85rem;
+  font-size: 1.15rem;
+}
+
+
+/* Flexbox for list items- the trick here is to have not flex: values; on any item except the excerpt */
+
+@media screen and (min-width: 640px)   {
+  ul.hfeed  {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Puzzle: Removing flex-direction: column from li.hentry renders the card elements lined up */
+/* As demonstrated by Rachel Andrew at CSS Layout Workshop */
+li.hentry {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+  flex: 1 1 0;
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+li.hentry:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+}
+
+.hentry h2  {
+  min-height: 6rem;
+  margin: 0;
+  color: #f2f2f2;
+}
+
+.hentry a   {
+  display: flex;
+  flex-direction: column;
+}
+
+.hentry h2:hover  {
+  text-decoration: underline;
+}
+
+.entry-published  {
+  padding: .85rem;
+}
+
+.entry-excerpt  {
+  flex: 1 1 auto;
+  padding: .85rem;
+}
+
+.comments   {
+  padding: .85rem;
+}
+
+/* Archive page footer-type nav for categories, tags, etc. */
+.not-on-side  {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.sidebar  {
+  padding-right: 1.75vw;
+  padding-left: 1.75vw;
+  padding-top: 1.15rem;
+  padding-bottom: 1.15rem;
+  }
+
+.sidebar ul   {
+  margin-top: 1.15rem;
+}
+
+
+form.comment-form {
+  padding: .85rem;
+  margin: 1.15rem 0 0 0;
+}
+
+@media screen and (min-width: 640px)  {
+  .sidebar  {
+  padding-top: 7vw;
+  }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+<blockquote>
+		<perch:blog id="blockquote" type="textarea" label="A blockquote stands alone on the page, presented in a manner distinct from other text" markdown editor="markitup" html help="Double-Return for a paragraph, Spacebar-Spacebar-Return for a single line" />
+			<perch:if exists="person_cited">
+				<h6><perch:blog id="person_cited" type="text" label="Optional: The person, etc. associated with the quote" /> </h6>
+			</perch:if>
+			<perch:if exists="work_cited">
+				<cite><perch:blog id="work_cited" type="text" label="Optional: The work cited" /></cite>
+			</perch:if>
+</blockquote>

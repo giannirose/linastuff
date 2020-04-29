@@ -1,0 +1,126 @@
+a:link	{
+
+	text-decoration: none;
+
+	}	
+
+a:visited	{
+	color: #0a0a0a;
+	}
+
+a:hover 	{
+	text-decoration: none;
+}	
+
+a:link:active	{
+
+	}
+*/
+h1		{
+	display: block;
+	font-size: 2em;
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+}
+
+h2		{
+	display: block;
+	font-size: 1.5em;
+	/*margin-top: 0.83em;
+	margin-bottom: 0.83em;*/
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+	}	
+
+h3		{
+	display: block;
+	font-size: 1.17em;
+	/*margin-top: 1em;
+	margin-bottom: 1em;*/
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+	}
+
+h4		{
+	display: block;
+	/*margin-top: 1.33em;
+	margin-bottom: 1.33em;*/
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+}
+
+h5 	{
+	display: block;
+	font-size: .83em;
+	/*margin-top: 1.67em;
+	margin-bottom: 1.67em;*/
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+}
+
+h6		{
+	display: block;
+	font-size: .67em;
+	/*margin-top: 2.33em;
+	margin-bottom: 2.33em;*/
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+	}
+
+blockquote 	{	
+	display: block;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+/* Default list value. Use class .no-list-style to hide bullets */
+li 	{
+	display: list-item;
+}
+/* Add line-height to li */
+li 	{
+	line-height: calc(100% + .75rem);
+}
+
+p		{
+	display: block;
+	/*margin-top: 1em;
+	margin-bottom: 1em;*/
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	}
+
+ul 	{	
+	display: block;
+	list-style-type: disc;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 40px;
+}
+
+
+

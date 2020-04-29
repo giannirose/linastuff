@@ -1,0 +1,23 @@
+<!-- This is an image that centers on the page, can be a link -->
+<div class="art_clear figctr block">
+	<figure class="figure-ctr">
+		<a href="<perch:blog id="img_url" type="text" label="If the image is also a link, enter the URL address here." help="Why might one do this? Example: a link to the website of the photographer. Folks are as likely to click the image as the written link." order="4"/>">
+ 			<img src="<perch:blog type="image" id="image_ctr_art" label="Image" help="This image will be centered on the page and will span the full width of the page or, if it is smaller, the full size of the image. Images that are wider than tall will work best." bucket="images" order="1"  />" alt="<perch:blog type="text" id="alt" label="Description"  help="This will not appear on the page. Enter a short, basic description for screen readers and for improved accessibility and search ranking."  required="true" order="2" />" 
+  			   sizes="(min-width: 720px) 960,
+ 			   		 (min-width: 540px) 720,
+ 			   		 (min-width: 360px) 540,
+ 			   		  100vw"
+	    			srcset="<perch:blog type="image" id="image" label="Image" width="360"> 360w,
+	            <perch:blog type="image" id="image" label="Image" width="540"> 540w,
+	            <perch:blog type="image" id="image" label="Image" width="720"> 720w,
+	            <perch:blog type="image" id="image" label="Image" width="960"> 960w">
+ 		</a>
+			<figcaption class="figure-caption text-center">
+				<perch:if exists="figure_caption">
+				<p><perch:blog id="figure_caption" type="textarea" label="Caption for the image" help="The caption appears centered beneath the image. For a copyright symbol, type this: &amp;copy; " html="true" markdown editor="markitup" html="true" size="xs" order="3"/></p>
+				</perch:if> 
+			</figcaption>
+	</figure>
+</div>
+
+

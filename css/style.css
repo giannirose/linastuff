@@ -1,0 +1,320 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body 	{
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", 
+   "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+   margin-top: 0;
+   font-size: 16px;
+}
+
+* 	{
+	box-sizing: border-box;
+}
+
+blockquote 	{
+	font-family: serif;
+	margin-left: -3.5vw;
+  	quotes: "\201C""\201D""\2018""\2019";
+  	border-top: 3px solid #ccc;
+  	border-bottom: 3px solid #ccc;
+  	font-size: 1.15rem;
+	color: #666;
+}
+
+/* Draws on MDN docs */
+button.styled 	{
+	 border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    color: #f2f2f2;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 1.375rem;
+    /*background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));*/
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+button.styled 	{
+	width: 20rem;
+	height: 2.75rem;
+}
+
+button.styled:hover {
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: .1rem;
+}
+
+
+figcaption 	{
+	display: table-caption;
+	caption-side: bottom;
+	text-align: center;
+	font-style: italic;
+}
+
+figure 	{
+	margin: 0;
+	display: table;
+}
+
+header 	{
+	padding: .2rem 3.5vw;
+}
+
+img 	{
+	max-width: 100%;
+}
+
+ul 	{
+	padding-left: 0;
+}
+
+@media screen and (min-width: 640px) 	{
+	figure 	{
+
+	}
+	header 	{
+		padding: 1rem 3.5vw;
+	}
+}
+
+.block 	{
+	padding-top: 1.75rem;
+}
+
+.clearfix {
+    clear: both;
+    /*grid-column: 1;*/
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Style the comments area */
+.comment .date	{
+	font-size: 1rem;
+}
+
+.comment p 	{
+	font-size: 1rem;
+}
+
+/* A possible border for figure- image plus caption */
+/*.figure {
+    border: solid 4px transparent;
+    box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+    max-width: 100%;
+    transition: box-shadow 200ms ease-out;
+    border-radius: 0;
+}*/
+
+.figure-ctr 	{
+	text-align: center;
+	margin: 1rem auto;
+}
+
+.float-left 	{
+	float: left;
+}
+
+.folio-wrapper figure 	{
+	margin: 1rem;
+} 
+.indent 	{
+	text-indent: 3.5vw;
+}
+
+/* Display list without bullets */
+.no-list-style 	{
+	list-style: none;
+}
+
+.page-margins 	{
+	padding-left: 3.5vw;
+	padding-right: 3.5vw;	
+}
+
+.primary-content 	{
+	padding-left: 3.5vw;
+	padding-right: 1.75vw;
+	}
+
+
+
+.sidebar li 	{
+	list-style: none;
+}
+
+.sidebar.not-on-side 	{
+	padding: 1.75vw;
+}
+
+
+
+.sidebar a:hover 	{
+	text-decoration: underline;
+}
+
+.sidebar div 	{
+	padding: 0 1rem;
+}
+
+/* Generic class to center text */
+.text-center 	{
+	text-align: center;
+}
+
+.wrapper 	{
+	
+}
+
+
+/* Add margins to text on wider screens: shorter lines are easier to read */
+@media screen and (min-width: 640px) {
+	/* Set a height for the flexbox images */
+	.folio-wrapper img 	{
+		max-height: 192px;
+	}
+
+	/*With a post sidebar, the main content area padding is revised */
+	.post .readabletext 	{
+		padding-right: 1.75vw;
+		padding-left: 3.5vw;
+
+	.readabletext   {
+    	padding: 0 7.5vw;
+	}
+}
+
+
+
+.module .author 	{
+	padding: 1.5rem 0 1rem 0;
+}
+
+#two-scroll-wrapper .readabletext 	{
+		padding: 0 12vw;
+	}
+
+li.hentry  	{
+	border-bottom: 1px dotted #555;
+}
+
+@media screen and (min-width: 640px) 	{
+	li.hentry 	{
+		border-bottom: none;
+    	border-right: 1px dotted #555;
+ 	}
+
+ 		li.hentry:nth-child(3n+3) {
+ 			border-right: none;
+ 		}
+}
+
+.hentry .date 	{
+	font-size: 1rem;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.hentry .description 	{
+	font-family: Georgia, serif;
+	font-size: .9rem;
+}
+
+.hentry 	{
+	margin-bottom: 1.5rem;
+}
+
+.hentry .comments 	{
+	font-size: .75rem;
+	font-style: italic;
+	font-weight: 300;
+}
+
+
+/* Chris Coyier CSS for right/left placement for pulledquote example using JQuery */
+/*span.pulled-right {
+	display: block;
+	padding: .5rem;
+	font-size: 1.15rem;
+	line-height: 1.45rem;
+	font-style: italic;
+	font-family: serif;
+	color: #0a0a0a;
+	border-top: 2px solid hsla(195, 100%, 23%, 1);
+	border-radius: 0 0 10px 10px;
+	background: linear-gradient(to bottom right, hsla(155, 77%, 83%, .2), hsla(195, 100%, 23%, .04));
+	float: right;
+	width: 320px;
+	margin: 12px 0 12px 18px;	
+}
+*/
+
+span.pulled-right {
+   display: block;
+   float: right;
+   padding: 0 0 0 10px;
+   font-size: 1.35em;
+   line-height: 1.4em;
+   text-align: right;
+   color: #666;
+   border-left: 3px solid #ccc;
+   width: 320px;
+	margin: 12px 0 12px 18px;
+}
+
+span.pulled-left {
+   display: block;
+   padding: 0 10px 0 0;
+   margin: 0 10px 10px 0;
+   width: 170px;
+   font-size: 1.35em;
+   line-height: 1.75em;
+   text-align: left;
+   color: #666;
+   border-right: 3px solid #ccc;
+   float: left;	
+	width: 251px;
+	margin: 12px 24px 24px -3.5vw;
+}
+
+/* Make the sidebar content sticky */
+.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  padding-top: 2rem;
+}
+
+.sidebar ul 	{
+margin-top: .25em;
+}
+
+
+
+
+
+
+
+
+

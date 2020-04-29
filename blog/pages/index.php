@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Perch Blog Example Listing Page</title>
+	<title>Perch Blog Listing Page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.php" />
 	<?php perch_get_css(); ?>
@@ -11,9 +11,10 @@
 </head>
 <body>
 	<header class="layout-header">
+	<?php perch_content("Blog Header"); ?>
 		<div class="wrapper">
-			<div class="company-name">Perch Blog App - Company Name</div>
-			<img src="<?php perch_path('feathers/quill/img/logo.gif'); ?>" alt="Your Logo Here" class="logo"/>
+			<div class="company-name">Perch Blog App - Company Name
+			</div>
 		</div>
 		<nav class="main-nav">
 			<?php perch_pages_navigation(array(
@@ -22,6 +23,8 @@
 			?>
 		</nav>
 	</header>
+
+
 
 	<!--  change cols2-nav-right to cols2-nav-left if you want the sidebar on the left -->
 	<div class="wrapper cols2-nav-right">
@@ -76,3 +79,5 @@
 	<?php perch_get_javascript(); ?>
 </body>
 </html>
+
+    <?php PerchUtil::output_debug(); ?>

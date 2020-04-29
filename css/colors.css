@@ -1,0 +1,134 @@
+.reddish 	{
+	color: #b90000;
+}
+
+/* Dark blue used in the early header */
+/*.intro a	{
+  color: hsla(195, 100%, 23%, 1);
+  text-decoration: none;
+}
+
+.intro a:hover 	{
+	color: hsla(195, 100%, 23%, .6);
+  	text-decoration: underline;
+}
+*/
+
+.intro-heading > h2 	{
+	color: hsla(195, 100%, 23%, 1);
+}
+
+.hentry h2  {
+   background: hsla(195, 100%, 23%, 1);
+}
+
+.intro-heading > h2 	{
+	color: hsla(195, 100%, 23%, 1);
+}
+
+/* This is a nice transition */
+.gradient-bar {
+  background-image: linear-gradient(to bottom right, hsla(195, 100%, 23%, 1), hsla(155, 77%, 83%, 1));
+}
+
+/*Gradient text test fromn Sarah Fossheim at https://fossheim.io/writing/posts/css-text-gradient/*/
+.gradient-text {
+  background-color: blue;
+   /*background-image: linear-gradient(45deg, hsla(210, 100%, 96%, 1), hsla(120, 100%, 96%, 1));*/
+   /*background-image: linear-gradient(45deg, pink, lightyellow, lightgreen, lightblue); The sample original */ 
+   background-image: linear-gradient(90deg, #f2f2f2, gray, lightgray, #0a0a0a);
+    background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+blockquote::before  {
+  color: #ccc;
+}
+
+/* The sidebar for the blog */
+.sidebar  {  
+  background: hsla(195, 100%, 23%, .1);
+}
+
+form.comment-form {
+	background: hsla(195, 100%, 23%, 1);
+	color: #f2f2f2;
+}
+
+footer small 	{
+	color: #f2f2f2;
+	background: hsla(195, 100%, 23%, 1);
+	display: block;
+	padding: 1.15rem 0;
+	margin-top: 1.15rem;
+}
+
+.hentry a h2	{
+	color: #f2f2f2;
+}
+
+.hentry a span, .hentry a .comments 	{
+	color: #444;
+}
+
+.hentry a .entry-summary 	{
+	color: #0a0a0a;
+}
+
+.sidebar a 	{
+	color: #0a0a0a;
+}
+
+button 	{
+	background-image: linear-gradient(to top, hsla(195, 100%, 23%, 1) 35%, hsla(155, 77%, 83%, 1));
+
+
+	/* background-color: hsla(195, 100%, 23%, 1); */
+	color: #f2f2f2;
+}
+
+button:hover {
+	background-image: linear-gradient(to top, hsla(195, 100%, 23%, 1) 50%, hsla(155, 77%, 83%, .85));
+}
+
+button:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+/* Style the comments box */
+.post form 	{
+	background: hsla(195, 100%, 23%, 1);
+	color: #f2f2f2;
+	padding: .85rem;
+}
+
+.blog h1 	{
+	color: #f2f2f2;
+	text-align: left;
+	font-size: calc(100% + 2.575vw);
+}
+
+.blog h2 	{
+	color: #0a0a0a;
+	text-align: right;
+	font-size: calc(100% + 1.75vw);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
